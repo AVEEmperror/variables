@@ -10,3 +10,13 @@ Example:
 """
 
 # Your code here
+list = []
+
+nums = input('Enter the numbers: ')
+list = nums.split()
+
+for i in range(0,len(list) - 1, 2):
+    list[i], list[i+1] = list[i+1], list[i]
+
+for i in list:
+    print(i, end=' ', sep='')

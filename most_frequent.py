@@ -20,3 +20,23 @@ a given letter can be found using the `count` method for a text string (please s
 """
 
 # Your code here
+
+text = input('Enter a text: ').lower()
+seen = []
+data = {}
+
+for i in range(0, len(text)):
+    if text[i] in seen:
+        continue
+    data[text[i].upper()] = text.count(text[i])
+    seen.append(text[i])
+
+data_sorted = sorted(data.items(), key = lambda data_t:data_t[1], reverse = True)
+print(data_sorted[0][0])
+
+for i in range(1, len(data_sorted)):
+    if data_sorted[i][1] == data_sorted[0][1]:
+        print(data_sorted[i][0])
+
+
+

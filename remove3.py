@@ -9,3 +9,13 @@ Example:
 """
 
 # Your code here
+text = input('Enter a text: ')
+
+out = []
+
+for i in range(0, len(text)):
+    if (i + 1) % 3 != 0:
+        out.append(text[i])
+
+for i in range(0, len(out)):
+    print(out[i], end='')
